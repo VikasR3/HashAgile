@@ -1,0 +1,35 @@
+
+public class HATFD1015
+{
+    public static int uniquec(String str)
+    {
+        int i,j;
+    for(i=0;i<str.length();++i)
+    {
+
+        boolean nonrep = true;
+        for(j=0;j<str.length();++j)
+        {
+            if(i!=j && str.charAt(i) == str.charAt(j))
+            {
+                nonrep = false;
+            }
+        }
+
+        if(nonrep)
+        {
+            return i;
+        }
+
+        return -1;
+
+    }
+}
+
+    public static void main(String[] Args)
+    {
+        String str = "swiss";
+        System.out.println(uniquec(str));
+    }
+}
+    
